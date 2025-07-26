@@ -1,4 +1,4 @@
-const form = document.getElementById('form-rsvpasd');
+const form = document.getElementById('form-rsvp');
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -11,25 +11,26 @@ form.addEventListener('submit', function (e) {
 
   fetch('https://script.google.com/macros/s/AKfycbzmxhleBb8Hugi4FuCmANFentwbLHUNKJqJOLuhPGfauTBCTrBtH91Rzfp476QVhEg/exec', {
     method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json'
-    }
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
   })
   .then(async res => {
     if (!res.ok) {
       const errorText = await res.text();
-      console.error('Erro HTTP:', res.status, errorText);
-      throw new Error(`Erro HTTP ${res.status}`);
+      throw new Error(`Erro HTTP ${res.status}: ${errorText}`);
     }
-
-    const result = await res.json();
-    console.log('Resposta do servidor:', result);
-    alert('Obrigado por confirmar presença!');
-    form.reset();
+    return res.json();
+  })
+  .then(response => {
+    if (response.status === 'sucesso') {
+      alert('Obrigado por confirmar presença!');
+      form.reset();
+    } else {
+      alert('Erro: ' + response.mensagem);
+    }
   })
   .catch(err => {
-    console.error('Erro ao enviar:', err.message || err);
+    console.error('Erro ao enviar:', err);
     alert('Erro ao enviar sua resposta. Tente novamente.');
   });
 });
