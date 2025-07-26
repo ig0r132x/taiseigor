@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Casamento Tais & Igor</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Cabeçalho com foto -->
+  <header>
+    <img src="images/tais_e_igor.jpg" alt="Foto dos noivos" />
+  </header>
+
+  <!-- Menu de navegação -->
+  <nav>
+    <ul>
+      <li><a href="#noivos">Noivos</a></li>
+      <li><a href="#data">Data</a></li>
+      <li><a href="#local">Local</a></li>
+      <li><a href="#x">x</a></li>
+      <li><a href="#p">p</a></li>
+      <li><a href="#t">t</a></li>
+      <li><a href="#o">o</a></li>
+      <li><a href="#rsvp">Confirme sua presença</a></li>
+    </ul>
+  </nav>
+
+  <!-- Seção: Noivos -->
+  <section id="noivos">
+    <h2>Os Noivos</h2>
+    <p>Aqui você pode colocar um texto contando a história de vocês, como se conheceram, curiosidades etc.</p>
+  </section>
+
+  <!-- Seção: Data -->
+  <section id="data">
+    <h2>Data</h2>
+    <p>O casamento acontecerá no dia <strong>22 de agosto de 2026</strong>. Reserve essa data com carinho!</p>
+  </section>
+
+  <!-- Seção: Local -->
+  <section id="local">
+    <h2>Local</h2>
+    <p>A cerimônia será realizada no <strong>Espaço Casa da Ana</strong>, em Brasília.</p>
+
+    <div style="border:1px solid #ccc; margin-top:20px;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.35400834835!2d-47.92738422411009!3d-15.89051412533089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2f763e9f3b27%3A0xe088dbfece870ab4!2sEspa%C3%A7o%20Casa%20da%20Ana!5e0!3m2!1spt-BR!2sbr!4v1753559433769!5m2!1spt-BR!2sbr"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen="true"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+    <!-- Seção: Data -->
+  <section id="x">
+    <h2>x</h2>
+  </section>
+
+  <!-- Seção: Data -->
+  <section id="p">
+    <h2>p</h2>
+  </section>
+
+    <!-- Seção: Data -->
+    <section id="t">
+      <h2>t</h2>
+    </section>
+
+    <!-- Seção: Data -->
+    <section id="o">
+      <h2>o</h2>
+    </section>
+
+    <!-- formulário -->
+    <section id="rsvp">
+      <h2>RSVP</h2>
+      <p>Confirme sua presença no nosso grande dia 💍</p>
+      <br>
+
+      <form id="form-rsvp" action="https://script.google.com/macros/s/AKfycbwgUnbHIAq60SxVGDpIhQYPN-cI7pTrPwFY0NwqtSFDA2QG67DehqZw2MJSuNVMX2UM/exec" method="POST">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <select name="presenca">
+          <option value="Sim">Sim, estarei presente</option>
+          <option value="Não">Infelizmente não poderei</option>
+        </select>
+        <textarea name="mensagem" placeholder="Deixe uma mensagem aos noivos"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+  </section>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
