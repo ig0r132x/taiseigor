@@ -81,7 +81,9 @@
     <h2>RSVP</h2>
     <p>Confirme sua presença no nosso grande dia 💍</p>
     <br>
-    <form id="form-rsvp">
+    <form action="https://script.google.com/macros/s/AKfycbzmxhleBb8Hugi4FuCmANFentwbLHUNKJqJOLuhPGfauTBCTrBtH91Rzfp476QVhEg/exec" method="POST" target="hidden_iframe">
+
+<!--    <form id="form-rsvp">-->
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
 
@@ -97,6 +99,8 @@
 
       <button type="submit">Enviar</button>
     </form>
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
   </section>
 
   <script src="js/script.js" defer></script>
