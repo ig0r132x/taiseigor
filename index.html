@@ -77,21 +77,26 @@
       <h2>o</h2>
     </section>
 
-    <!-- formulário -->
-    <section id="rsvp">
-      <h2>RSVP</h2>
-      <p>Confirme sua presença no nosso grande dia 💍</p>
-      <br>
+  <section id="rsvp">
+    <h2>RSVP</h2>
+    <p>Confirme sua presença no nosso grande dia 💍</p>
+    <br>
+    <form id="form-rsvp">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
 
-      <form id="form-rsvp">
-        <input type="text" name="nome" placeholder="Seu nome" required />
-        <select name="presenca">
-          <option value="Sim">Sim, estarei presente</option>
-          <option value="Não">Infelizmente não poderei</option>
-        </select>
-        <textarea name="mensagem" placeholder="Deixe uma mensagem aos noivos"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+      <label for="presenca">Você irá ao casamento?</label>
+      <select id="presenca" name="presenca" required>
+        <option value="" disabled selected>Selecione</option>
+        <option value="Sim">Sim, estarei presente</option>
+        <option value="Não">Infelizmente não poderei</option>
+      </select>
+
+      <label for="mensagem">Mensagem para os noivos (opcional):</label>
+      <textarea id="mensagem" name="mensagem" placeholder="Deixe uma mensagem..."></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
   <script src="js/script.js" defer></script>
