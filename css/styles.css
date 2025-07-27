@@ -1,23 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
+
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fffaf7;
+  color: #333;
 }
 
 header {
+  position: relative;
+  height: 100vh;
+  background: url('../images/casadaana.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  background-color: #fff;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 }
 
 header img {
   max-width: 100%;
   height: auto;
-  max-height: 400px; /* ajuste conforme quiser */
+  max-height: 100%;
   object-fit: cover;
+}
+
+/* Overlay com blur suave */
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+/* Nome do casal */
+.casamento-nomes {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Estilo do contador */
+.contador {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  display: inline-block;
+  backdrop-filter: blur(4px);
 }
 
 nav {
@@ -142,6 +192,74 @@ form#form-rsvp button:hover {
   #rsvp h2 {
     font-size: 1.6rem;
   }
+}
+
+/* Tela Presentes */
+
+.header-presentes {
+  text-align: center;
+  padding: 60px 20px 20px;
+  background-color: #fdeeea;
+}
+
+.header-presentes h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #c26c5d;
+}
+
+.grid-presentes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.presente {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.presente:hover {
+  transform: scale(1.02);
+}
+
+.presente img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.presente h3 {
+  margin-top: 0;
+  color: #b76d5c;
+}
+
+.presente .valor {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #7a4030;
+}
+
+.presente .qr {
+  width: 80px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #f8e8dc;
+  color: #a86653;
+  font-weight: bold;
 }
 
 /*Responsividade*/
